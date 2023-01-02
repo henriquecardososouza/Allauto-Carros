@@ -1,0 +1,401 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2c2c2c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Global*/
+.container {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  overflow: hidden;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+/*Header*/
+header {
+  background: #2c2c2c;
+  color: white;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #585858 3px solid;
+  padding: 20px 0 20px 0;
+  font-size: 20px;
+  position: relative;
+  z-index: 10;
+}
+header li {
+  float: left;
+  display: inline;
+  padding: 40px 20px 40px 20px;
+}
+header nav {
+  float: right;
+}
+header nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: 0.5s;
+}
+header nav a.atual {
+  color: #ffd000;
+}
+header nav a:hover {
+  color: #ffd000;
+}
+header #login {
+  text-align: right;
+  margin-top: 43px;
+  margin-left: 30px;
+  float: right;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: 0.5s;
+}
+header #login img {
+  width: 16px;
+  margin-left: 5px;
+  align-self: right;
+  float: right;
+}
+header #login:hover {
+  text-decoration: underline;
+}
+header #titulo img {
+  float: left;
+  width: 150px;
+}
+
+/*Section*/
+.slider {
+  position: relative;
+  transform: translateY(-100px);
+  z-index: 1;
+}
+.slider .slide {
+  width: 100%;
+  display: none;
+  -webkit-animation: fade-in 2s 0s, fade-out 2s 6s;
+          animation: fade-in 2s 0s, fade-out 2s 6s;
+}
+.slider .mask {
+  -webkit-mask-image: linear-gradient(#2c2c2c 0, transparent 80%);
+  mask-image: linear-gradient(#2c2c2c 0, transparent 80%);
+}
+.slider .container {
+  z-index: 5;
+  transform: translateY(-500px);
+  text-align: left;
+}
+.slider #title {
+  left: 0;
+  top: 0;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 4px 4px 4px black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 5;
+}
+.slider #description {
+  font-size: 20px;
+  color: white;
+  text-shadow: 4px 4px 4px black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 3;
+}
+.slider #mask {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*Newsletter*/
+#newsletter {
+  border-top: 3px solid #585858;
+  background-color: #2c2c2c;
+}
+#newsletter h1 {
+  float: left;
+  color: white;
+}
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+#newsletter form input {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-bottom: 2px solid #585858;
+  background-color: transparent;
+  transition: 0.5s;
+  outline: none;
+  color: white;
+}
+#newsletter form input:focus {
+  border-bottom: 2px solid #acacac;
+}
+#newsletter form button {
+  padding: 10px;
+  border: none;
+  color: white;
+  background-color: #2c2c2c;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: 5px;
+}
+#newsletter form button:hover {
+  background-color: #585858;
+}
+#newsletter form button:active {
+  background-color: #363636;
+}
+
+/*Produto*/
+#products {
+  z-index: 3;
+  transform: translateY(-200px);
+}
+#products .container {
+  width: 90%;
+}
+#products .produto {
+  text-align: center;
+  border: 3px solid #585858;
+  background-color: #2c2c2c;
+  border-radius: 9px;
+  width: 30%;
+  padding-bottom: 10px;
+  transition: 0.5s;
+  position: relative;
+  margin-left: 2%;
+  display: flex;
+  float: left;
+  min-height: 400px;
+}
+#products .produto a {
+  text-decoration: none;
+  color: white;
+}
+#products .produto:hover {
+  text-decoration: none;
+  background-color: #3e3e3e;
+}
+#products .produto#bmw .preco, #products .produto#volvo .preco {
+  padding-top: 40px;
+}
+#products .produto#mercedes #products .produto#volvo {
+  float: right;
+}
+#products .produto img {
+  width: 100%;
+}
+#products .produto .titulo {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  text-decoration: underline;
+}
+#products .produto .preco {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  color: #ffd000;
+}
+#products .produto .preco label {
+  font-size: 13px;
+  color: white;
+}
+#products h1 {
+  margin-left: 2%;
+  font-size: 55px;
+  color: white;
+  text-shadow: 3px 3px 3px black;
+  transform: translateY(-50px);
+}
+#products h1 label {
+  color: #ffd000;
+}
+
+/*Conheça-nos*/
+#conheca-nos .container {
+  width: 85%;
+  transform: translateY(-80px);
+}
+#conheca-nos button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  border: none;
+  padding: 20px 40px 20px 40px;
+  background-color: #585858;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  float: right;
+}
+#conheca-nos button:hover {
+  background-color: #363636;
+}
+
+/*section*/
+#sobre .container {
+  transform: translateY(-200px);
+}
+#sobre .container #o-que-fazemos {
+  background-color: #585858;
+  padding: 20px 40px 40px 40px;
+  color: white;
+  font-size: 16px;
+  text-align: justify;
+}
+#sobre .container #o-que-fazemos h1 {
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 2px;
+}
+#sobre .container #o-que-fazemos h1 span {
+  color: #ffd000;
+}
+
+/*Produtos*/
+section#produtos .veiculo {
+  width: 80%;
+  border: 2px solid #585858;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+section#produtos .veiculo img {
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+section#produtos .veiculo h1 {
+  color: #ffd000;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+section#produtos .veiculo h1 span {
+  color: white;
+  font-size: 30px;
+}
+section#produtos .veiculo a {
+  text-decoration: none;
+  color: white;
+}
+section#produtos .veiculo a:hover {
+  text-decoration: underline;
+}
+section#produtos h1 {
+  color: white;
+  font-size: 60px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: underline;
+}
+section#produtos h1 span {
+  color: #ffd000;
+}
+
+/*Form*/
+#login-form {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#login-form .form {
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  border: 2px solid #585858;
+  margin-left: 35%;
+}
+#login-form .form h1 {
+  color: white;
+  font-size: 38px;
+}
+#login-form .form input {
+  width: 80%;
+  height: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 60px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #585858;
+  outline: none;
+  color: white;
+  transition: 0.5s;
+}
+#login-form .form input:focus {
+  border-bottom: 2px solid white;
+}
+#login-form .form button {
+  border: none;
+  padding: 15px 25px 15px 25px;
+  background-color: #363636;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 75px;
+  position: absolute;
+}
+#login-form .form button :hover {
+  background-color: #585858;
+}
+
+/*Footer*/
+footer {
+  text-align: center;
+  background-color: #2c2c2c;
+  color: white;
+  padding: 30px;
+  border-top: 2px solid #585858;
+}/*# sourceMappingURL=style.css.map */

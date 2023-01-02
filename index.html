@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allauto Carros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <span><a id="login" href="login.html"><img src="img/log-in.png" alt="Login">Entrar</a></span>
+
+            <div id="titulo">
+                <a href="index.html"> <img src="img/logo.png" alt="Allauto Carros"> </a>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li>
+                        <a class="atual" href="index.html">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="sobre.html">Sobre</a>
+                    </li>
+                    
+                    <li>
+                        <a href="veiculos.html">Veículos</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="slider">
+        <img class="slide mask" src="img/home section/slide1.png" alt="Imagem 1">
+        <img class="slide mask" src="img/home section/slide2.png" alt="Imagem 2">
+        <img class="slide mask" src="img/home section/slide3.png" alt="Imagem 3">
+        <img class="slide mask" src="img/home section/slide4.png" alt="Imagem 4">
+
+        <div class="container">
+            <div id="title">
+                Allauto Locadora de Automóveis
+                <br>
+                <div id="description">
+                    Uma empresa que se preocupa com seus clientes
+                </div>
+            </div>
+        </div>
+
+        <div id="mask"></div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            slides[slideIndex - 1].style.width = "100%";
+
+            setTimeout(showSlides, 8000); // Change image every 8 seconds
+        }
+    </script>
+
+    <section id="products">
+        <div class="container">
+            <h1>Nossos <label>Veículos</label></h1>
+
+            <div class="produto" id="bmw">
+                <a href="produtos/bmw-series-5.html">
+                    <img src="img/products/bmw-serie-5-sedan.png" alt="Bmw Série 5 - Sendan">
+                    <span class="titulo">Bmw Série 5</span>
+                    <br>
+                    <br>
+                    <span class="preco"><label>A partir de</label> R$ 450.950,00</span>
+                </a>
+            </div>
+
+            <div class="produto" id="mercedes">
+                <a href="produtos/mercedes-benz-classe-c.html">
+                    <img src="img/products/mercedes-benz-classe-c.png" alt="Mercedes Benz Classe C">
+                    <span class="titulo">Mercedes Benz Classe C</span>
+                    <br>
+                    <br>
+                    <span class="preco"><label>A partir de</label> R$ 359.900,00</span>
+                </a>
+            </div>
+
+            <div class="produto" id="volvo">
+                <a href="produtos/volvo-xc60.html">
+                    <img src="img/products/volvo-xc60.png" alt="Volvo XC60">
+                    <span class="titulo">Volvo XC60</span>
+                    <br>
+                    <br>
+                    <span class="preco"><label>A partir de</label> R$ 465.950,00</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="conheca-nos">
+        <div class="container">
+            <form action="sobre.html">
+                <button type="submit">Conheça-nos</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>
+                Se inscreva na nossa newsletter
+            </h1>
+
+            <form action="">
+                <input type="email" placeholder="Email">
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <span>Allauto Carros, &copy;Copyright 2022</span>
+        </div>
+    </footer>
+</body>
+</html>
