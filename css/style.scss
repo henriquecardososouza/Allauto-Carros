@@ -353,11 +353,6 @@ section#produtos {
             font-size: 30px;
             text-align: center;
             text-decoration: none;
-
-            span {
-                color: white;
-                font-size: 30px;
-            }
         }
 
         a {
@@ -428,7 +423,7 @@ section#produtos {
             margin-left: 75px;
             position: absolute;
 
-            :hover {
+            &:hover {
                 background-color: #585858;
             }
         }
