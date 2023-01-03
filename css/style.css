@@ -323,10 +323,6 @@ section#produtos .veiculo h1 {
   text-align: center;
   text-decoration: none;
 }
-section#produtos .veiculo h1 span {
-  color: white;
-  font-size: 30px;
-}
 section#produtos .veiculo a {
   text-decoration: none;
   color: white;
@@ -387,7 +383,7 @@ section#produtos h1 span {
   margin-left: 75px;
   position: absolute;
 }
-#login-form .form button :hover {
+#login-form .form button:hover {
   background-color: #585858;
 }
 
