@@ -378,10 +378,11 @@ section#produtos {
 }
 
 /*Form*/
-#login-form {
+#login-form, #sign-form {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    position: relative;
 
     .form {
         width: 400px;
@@ -427,7 +428,25 @@ section#produtos {
                 background-color: #585858;
             }
         }
+
+        a {
+            text-decoration: none;
+            color: white;
+            position: absolute;
+            display: flex;
+            margin-left: 40px;
+            margin-top: 10px;
+            transition: 0.5s;
+
+            &:hover {
+                color: #ffd000;
+            }
+        }
     }
+}
+
+#sign-form button {
+    margin-left: 54px!important;
 }
 
 /*Footer*/

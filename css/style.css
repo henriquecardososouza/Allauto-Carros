@@ -341,23 +341,24 @@ section#produtos h1 span {
 }
 
 /*Form*/
-#login-form {
+#login-form, #sign-form {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
+  position: relative;
 }
-#login-form .form {
+#login-form .form, #sign-form .form {
   width: 400px;
   height: 400px;
   border-radius: 10px;
   border: 2px solid #585858;
   margin-left: 35%;
 }
-#login-form .form h1 {
+#login-form .form h1, #sign-form .form h1 {
   color: white;
   font-size: 38px;
 }
-#login-form .form input {
+#login-form .form input, #sign-form .form input {
   width: 80%;
   height: 20px;
   padding-top: 10px;
@@ -370,10 +371,10 @@ section#produtos h1 span {
   color: white;
   transition: 0.5s;
 }
-#login-form .form input:focus {
+#login-form .form input:focus, #sign-form .form input:focus {
   border-bottom: 2px solid white;
 }
-#login-form .form button {
+#login-form .form button, #sign-form .form button {
   border: none;
   padding: 15px 25px 15px 25px;
   background-color: #363636;
@@ -383,8 +384,24 @@ section#produtos h1 span {
   margin-left: 75px;
   position: absolute;
 }
-#login-form .form button:hover {
+#login-form .form button:hover, #sign-form .form button:hover {
   background-color: #585858;
+}
+#login-form .form a, #sign-form .form a {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  display: flex;
+  margin-left: 40px;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+#login-form .form a:hover, #sign-form .form a:hover {
+  color: #ffd000;
+}
+
+#sign-form button {
+  margin-left: 54px !important;
 }
 
 /*Footer*/
