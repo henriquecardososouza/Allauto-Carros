@@ -79,7 +79,6 @@ header #titulo img {
 /*Section*/
 .slider {
   position: relative;
-  transform: translateY(-100px);
   z-index: 1;
 }
 .slider .slide {
@@ -87,6 +86,7 @@ header #titulo img {
   display: none;
   -webkit-animation: fade-in 2s 0s, fade-out 2s 6s;
           animation: fade-in 2s 0s, fade-out 2s 6s;
+  position: relative;
 }
 .slider .mask {
   -webkit-mask-image: linear-gradient(#2c2c2c 0, transparent 80%);
@@ -94,12 +94,11 @@ header #titulo img {
 }
 .slider .container {
   z-index: 5;
-  transform: translateY(-500px);
   text-align: left;
+  position: absolute;
+  margin: 8%;
 }
-.slider #title {
-  left: 0;
-  top: 0;
+.slider .container #title {
   font-size: 60px;
   font-weight: bold;
   color: white;
@@ -107,7 +106,7 @@ header #titulo img {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   z-index: 5;
 }
-.slider #description {
+.slider .container #description {
   font-size: 20px;
   color: white;
   text-shadow: 4px 4px 4px black;
@@ -161,15 +160,15 @@ header #titulo img {
   border-top: 3px solid #585858;
   background-color: #2c2c2c;
 }
-#newsletter h1 {
+#newsletter .container h1 {
   float: left;
   color: white;
 }
-#newsletter form {
+#newsletter .container form {
   float: right;
   margin-top: 15px;
 }
-#newsletter form input {
+#newsletter .container form input {
   padding: 10px;
   width: 300px;
   border: none;
@@ -179,10 +178,10 @@ header #titulo img {
   outline: none;
   color: white;
 }
-#newsletter form input:focus {
+#newsletter .container form input:focus {
   border-bottom: 2px solid #acacac;
 }
-#newsletter form button {
+#newsletter .container form button {
   padding: 10px;
   border: none;
   color: white;
@@ -191,83 +190,105 @@ header #titulo img {
   transition: 0.3s;
   margin-left: 5px;
 }
-#newsletter form button:hover {
+#newsletter .container form button:hover {
   background-color: #585858;
 }
-#newsletter form button:active {
+#newsletter .container form button:active {
   background-color: #363636;
 }
 
 /*Produto*/
 #products {
   z-index: 3;
-  transform: translateY(-200px);
 }
 #products .container {
   width: 90%;
+  white-space: nowrap;
+  overflow-x: auto;
 }
-#products .produto {
-  text-align: center;
+#products .container .ver-tudo {
+  transform: translateY(-70px) translateX(-100px);
+  display: inline-block;
+}
+#products .container .ver-tudo a {
+  text-decoration: none;
+  color: white;
+}
+#products .container .ver-tudo a #ver-mais {
+  width: 50px;
+}
+#products .container .ver-tudo a #ver-mais img {
+  width: 100%;
+  padding: 10px;
+  background-color: #2c2c2c;
+  border-radius: 50%;
+  border: 3px solid #585858;
+  transition: 0.5s;
+}
+#products .container .ver-tudo:hover a #ver-mais img {
+  background-color: #3e3e3e;
+}
+#products .container .product-container {
+  width: 350px;
+  height: 420px;
+  display: inline-block;
+  margin: 0 5px 10px 0;
   border: 3px solid #585858;
   background-color: #2c2c2c;
   border-radius: 9px;
-  width: 30%;
-  padding-bottom: 10px;
   transition: 0.5s;
-  position: relative;
-  margin-left: 2%;
-  display: flex;
-  float: left;
-  min-height: 400px;
 }
-#products .produto a {
-  text-decoration: none;
-  color: white;
-}
-#products .produto:hover {
-  text-decoration: none;
+#products .container .product-container:hover {
   background-color: #3e3e3e;
 }
-#products .produto#bmw .preco, #products .produto#volvo .preco {
-  padding-top: 40px;
+#products .container .product-container:nth-child(4) {
+  -webkit-mask-image: linear-gradient(to right, #2c2c2c 0, transparent 90%);
+  mask-image: linear-gradient(to right, #2c2c2c 0, transparent 90%);
 }
-#products .produto#mercedes #products .produto#volvo {
-  float: right;
+#products .container .product-container a {
+  width: 350px;
+  height: 420px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
 }
-#products .produto img {
+#products .container .product-container a .produto img {
   width: 100%;
 }
-#products .produto .titulo {
+#products .container .product-container a .produto h2 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 40px;
-  text-decoration: underline;
+  text-shadow: 3px 3px 3px black;
+  display: grid;
 }
-#products .produto .preco {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 40px;
+#products .container .product-container a .produto h2.preco {
   color: #ffd000;
 }
-#products .produto .preco label {
+#products .container .product-container a .produto h2 label {
   font-size: 13px;
   color: white;
 }
-#products h1 {
-  margin-left: 2%;
+#products .h1-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 90%;
+}
+#products .h1-container h1 {
   font-size: 55px;
   color: white;
   text-shadow: 3px 3px 3px black;
-  transform: translateY(-50px);
 }
-#products h1 label {
+#products .h1-container h1 label {
   color: #ffd000;
 }
 
 /*Conheça-nos*/
 #conheca-nos .container {
   width: 85%;
-  transform: translateY(-80px);
 }
-#conheca-nos button {
+#conheca-nos .container button {
+  margin: 10px 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
   border: none;
@@ -279,7 +300,7 @@ header #titulo img {
   cursor: pointer;
   float: right;
 }
-#conheca-nos button:hover {
+#conheca-nos .container button:hover {
   background-color: #363636;
 }
 
@@ -411,4 +432,203 @@ footer {
   color: white;
   padding: 30px;
   border-top: 2px solid #585858;
+}
+
+@media (max-width: 1150px) {
+  h1 {
+    font-size: 50px !important;
+  }
+  #newsletter .container form {
+    float: none;
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+  #newsletter .container form input {
+    width: 300px;
+  }
+  #conheca-nos .container form {
+    justify-content: center;
+    display: flex;
+  }
+  #conheca-nos .container form button {
+    margin-bottom: 20px;
+  }
+  #products .container .product-container {
+    width: 280px;
+    height: 320px;
+  }
+  #products .container .product-container a .produto img {
+    margin-top: 10px;
+  }
+  #products .container .product-container a .produto h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 960px) {
+  h1 {
+    font-size: 40px !important;
+  }
+  #newsletter .container form {
+    float: none;
+    margin-bottom: 20px;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+  }
+  #newsletter .container form input {
+    width: 300px;
+  }
+  #products .container .product-container {
+    width: 280px;
+    height: 320px;
+  }
+  #products .container .product-container a .produto img {
+    margin-top: 10px;
+  }
+  #products .container .product-container a .produto h2 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px !important;
+  }
+  .slider .container #description {
+    font-size: 16px;
+  }
+  header .container span a#login {
+    margin-top: 10px !important;
+    display: flex;
+    margin: 0;
+    font-size: 16px;
+  }
+  header .container span a#login img {
+    width: 16px;
+    margin-right: 3px;
+  }
+  header .container #titulo {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  header .container #titulo a img {
+    width: 70px;
+  }
+  header .container nav {
+    float: none;
+    display: block;
+  }
+  header .container nav ul li {
+    display: block;
+    padding: 0;
+    margin-right: 20px;
+  }
+  header .container nav ul li a {
+    font-size: 16px;
+  }
+  #newsletter .container {
+    text-align: center;
+  }
+  #newsletter .container h1 {
+    float: none;
+    display: block;
+  }
+  #newsletter .container form {
+    display: block;
+    width: 100%;
+  }
+  #newsletter .container form input {
+    width: 100%;
+  }
+  #newsletter .container form button {
+    margin: 10px 0;
+    width: 100%;
+  }
+  #products .container .product-container {
+    width: 230px;
+    height: 250px;
+  }
+  #products .container .product-container a .produto img {
+    margin-top: 10px;
+  }
+  #products .container .product-container a .produto h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 580px) {
+  h1 {
+    font-size: 20px !important;
+  }
+  .slider .container {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+  .slider .container #title h1 {
+    margin-top: 20px;
+  }
+  .slider .container #title #description {
+    font-size: 12px;
+  }
+  #conheca-nos .container {
+    justify-content: center;
+    display: flex;
+  }
+  #conheca-nos .container button {
+    font-size: 12px;
+    padding: 15px;
+  }
+  #newsletter .container {
+    text-align: center;
+  }
+  #newsletter .container h1 {
+    font-weight: normal;
+    float: none;
+  }
+  #newsletter .container form button {
+    margin: 10px 0;
+    width: 100%;
+  }
+  header .container span a#login {
+    margin-top: 10px !important;
+    display: flex;
+    margin: 0;
+    font-size: 10px;
+  }
+  header .container span a#login img {
+    width: 10px;
+    margin-right: 3px;
+  }
+  header .container #titulo {
+    width: 100%;
+    height: 28.5px;
+    margin-bottom: 10px;
+  }
+  header .container #titulo a img {
+    width: 50px;
+  }
+  header .container nav {
+    float: none;
+    display: block;
+  }
+  header .container nav ul li {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  header .container nav ul li a {
+    font-size: 10px;
+  }
+  #products .container .product-container {
+    width: 200px;
+    height: 250px;
+  }
+  #products .container .product-container a .produto img {
+    margin-top: 10px;
+  }
+  #products .container .product-container a .produto h2 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
