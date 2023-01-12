@@ -99,7 +99,7 @@ header #titulo img {
   margin: 8%;
 }
 .slider .container #title {
-  font-size: 60px;
+  font-size: 45px;
   font-weight: bold;
   color: white;
   text-shadow: 4px 4px 4px black;
@@ -288,7 +288,7 @@ header #titulo img {
   width: 85%;
 }
 #conheca-nos .container button {
-  margin: 10px 0;
+  margin: 30px 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
   border: none;
@@ -305,9 +305,6 @@ header #titulo img {
 }
 
 /*section*/
-#sobre .container {
-  transform: translateY(-200px);
-}
 #sobre .container #o-que-fazemos {
   background-color: #585858;
   padding: 20px 40px 40px 40px;
@@ -364,20 +361,21 @@ section#produtos h1 span {
 /*Form*/
 #login-form, #sign-form {
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   position: relative;
 }
 #login-form .form, #sign-form .form {
+  margin: 20px 0;
   width: 400px;
   height: 400px;
   border-radius: 10px;
   border: 2px solid #585858;
-  margin-left: 35%;
 }
 #login-form .form h1, #sign-form .form h1 {
   color: white;
-  font-size: 38px;
+  font-size: 38px !important;
 }
 #login-form .form input, #sign-form .form input {
   width: 80%;
@@ -421,8 +419,8 @@ section#produtos h1 span {
   color: #ffd000;
 }
 
-#sign-form button {
-  margin-left: 54px !important;
+#sign-form .form form button {
+  margin-left: 54px;
 }
 
 /*Footer*/
@@ -490,6 +488,12 @@ footer {
   #products .container .product-container a .produto h2 {
     font-size: 30px;
   }
+  #products .container .ver-tudo a #ver-mais {
+    transform: translateX(20px);
+  }
+  #products .container .ver-tudo a #ver-mais img {
+    width: 50px;
+  }
 }
 @media (max-width: 768px) {
   h1 {
@@ -555,6 +559,12 @@ footer {
   }
   #products .container .product-container a .produto h2 {
     font-size: 20px;
+  }
+  #products .container .ver-tudo a #ver-mais {
+    transform: translateY(15px) translateX(50px);
+  }
+  #products .container .ver-tudo a #ver-mais img {
+    width: 40px;
   }
 }
 @media (max-width: 580px) {
@@ -630,5 +640,26 @@ footer {
   }
   #products .container .product-container a .produto h2 {
     font-size: 20px;
+  }
+  #products .container .ver-tudo a #ver-mais {
+    transform: translateY(25px) translateX(50px);
+  }
+  #products .container .ver-tudo a #ver-mais img {
+    width: 30px;
+  }
+  #login-form .form, #sign-form .form {
+    width: 300px;
+  }
+  #login-form .form button, #sign-form .form button {
+    margin-left: 34px;
+  }
+  #login-form .form a, #sign-form .form a {
+    margin-left: 30px;
+  }
+  #sign-form .form form button {
+    margin-left: 15px;
+  }
+  #sobre .container #o-que-fazemos {
+    padding: 10px 10px;
   }
 }/*# sourceMappingURL=style.css.map */
